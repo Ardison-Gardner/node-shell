@@ -1,4 +1,5 @@
 const pwd = require('./pwd');
+const ls = require('./ls');
 
 //Output a prompt
 process.stdout.write('prompt > ');
@@ -15,13 +16,8 @@ process.stdin.on('data', (data) => {
     return pwd();
   }
 
+  if (cmd === 'ls') {
+    return ls()
+  }
+
 })
-
-// //Print working directory.
-
-// process.stdin.on('pwd', (pwd) => {
-//   const output = pwd.toString().trim();
-
-//   console.log(output)
-//   return output;
-// })
